@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3-Month Learning-Based Stay Program in Hiraizumi, Japan</title>
+  <meta name="description" content="A selective 3-month immersive learning program in Hiraizumi, a UNESCO World Heritage town in northern Japan. Designed for international students seeking real cultural and professional experience.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-ink: #1a1a2e;
+      --color-body: #3a3a4a;
+      --color-muted: #6b6b7b;
+      --color-border: #d8d8e0;
+      --color-bg: #fafaf8;
+      --color-bg-warm: #f5f3ee;
+      --color-bg-section: #f0ede6;
+      --color-accent: #2d5a3d;
+      --color-accent-light: #3a7a52;
+      --color-accent-bg: #e8f0eb;
+      --color-white: #ffffff;
+      --font-serif: 'EB Garamond', 'Georgia', serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--color-body);
+      background-color: var(--color-bg);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Navigation */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(250, 250, 248, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--color-border);
+      z-index: 100;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .nav.scrolled {
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 64px;
+    }
+
+    .nav-logo {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--color-ink);
+      text-decoration: none;
+      letter-spacing: -0.01em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--color-muted);
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--color-ink);
+    }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: var(--color-ink);
+      margin: 4px 0;
+      transition: 0.3s;
+    }
+
+    /* Hero */
+    .hero {
+      margin-top: 64px;
+      padding: 6rem 2rem 5rem;
+      background: linear-gradient(165deg, var(--color-bg-warm) 0%, var(--color-bg) 100%);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .hero-inner {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .hero-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      background: var(--color-accent-bg);
+      padding: 0.35rem 0.9rem;
+      border-radius: 3px;
+      margin-bottom: 1.8rem;
+    }
+
+    .hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      font-weight: 600;
+      color: var(--color-ink);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+      color: var(--color-muted);
+      line-height: 1.8;
+      max-width: 640px;
+    }
+
+    .hero-details {
+      margin-top: 2.5rem;
+      display: flex;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-detail {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .hero-detail-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-muted);
+    }
+
+    .hero-detail-value {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--color-ink);
+    }
+
+    /* Sections */
+    .section {
+      padding: 5rem 2rem;
+    }
+
+    .section--alt {
+      background-color: var(--color-bg-warm);
+    }
+
+    .section-inner {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: 0.8rem;
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.7rem, 3.5vw, 2.2rem);
+      font-weight: 600;
+      color: var(--color-ink);
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-text {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--color-body);
+      margin-bottom: 1.2rem;
+    }
+
+    .section-text:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Two-column layout */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin-top: 2.5rem;
+    }
+
+    .col-card {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      padding: 2rem;
+    }
+
+    .col-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--color-ink);
+      margin-bottom: 1rem;
+    }
+
+    .col-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .col-card ul li {
+      padding: 0.45rem 0;
+      padding-left: 1.3rem;
+      position: relative;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .col-card ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.85rem;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: var(--color-accent);
+      opacity: 0.5;
+    }
+
+    /* List styles */
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 2rem;
+    }
+
+    .feature-list li {
+      padding: 0.7rem 0;
+      padding-left: 1.8rem;
+      position: relative;
+      font-size: 1rem;
+      line-height: 1.7;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .feature-list li:last-child {
+      border-bottom: none;
+    }
+
+    .feature-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 1.05rem;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--color-accent);
+      opacity: 0.6;
+    }
+
+    /* Program Structure - Timeline */
+    .timeline {
+      margin-top: 2.5rem;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 2rem;
+      padding: 2rem 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .timeline-item:last-child {
+      border-bottom: none;
+    }
+
+    .timeline-phase {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--color-accent);
+    }
+
+    .timeline-phase span {
+      display: block;
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--color-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.2rem;
+    }
+
+    .timeline-content h3 {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--color-ink);
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-content p {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--color-body);
+    }
+
+    /* Location section */
+    .location-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+
+    .location-card {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+    }
+
+    .location-card-icon {
+      font-size: 1.8rem;
+      margin-bottom: 0.8rem;
+      display: block;
+    }
+
+    .location-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--color-ink);
+      margin-bottom: 0.5rem;
+    }
+
+    .location-card p {
+      font-size: 0.88rem;
+      color: var(--color-muted);
+      line-height: 1.6;
+    }
+
+    /* Fee section */
+    .fee-box {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      padding: 2.5rem;
+      margin-top: 2rem;
+    }
+
+    .fee-amount {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--color-ink);
+      margin-bottom: 0.3rem;
+    }
+
+    .fee-note {
+      font-size: 0.88rem;
+      color: var(--color-muted);
+      margin-bottom: 2rem;
+    }
+
+    .fee-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .fee-col h4 {
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-accent);
+      margin-bottom: 0.8rem;
+    }
+
+    .fee-col ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .fee-col ul li {
+      padding: 0.35rem 0;
+      font-size: 0.92rem;
+      color: var(--color-body);
+      padding-left: 1.2rem;
+      position: relative;
+    }
+
+    .fee-col ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.75rem;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+    }
+
+    .fee-included li::before {
+      background: var(--color-accent);
+    }
+
+    .fee-notincluded li::before {
+      background: var(--color-border);
+    }
+
+    /* Organizer */
+    .organizer-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .organizer-box {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 2rem;
+      align-items: start;
+      padding: 2.5rem;
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+    }
+
+    .organizer-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: var(--color-bg-section);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--color-accent);
+    }
+
+    .organizer-info h3 {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--color-ink);
+      margin-bottom: 0.3rem;
+    }
+
+    .organizer-info .role {
+      font-size: 0.85rem;
+      color: var(--color-accent);
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    .organizer-info p {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--color-body);
+    }
+
+    /* Process steps */
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+
+    .process-step {
+      text-align: center;
+      padding: 1.8rem 1rem;
+      position: relative;
+    }
+
+    .step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--color-accent-bg);
+      color: var(--color-accent);
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .process-step h3 {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--color-ink);
+      margin-bottom: 0.5rem;
+    }
+
+    .process-step p {
+      font-size: 0.85rem;
+      color: var(--color-muted);
+      line-height: 1.6;
+    }
+
+    /* FAQ */
+    .faq-list {
+      margin-top: 2rem;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--color-border);
+      padding: 1.5rem 0;
+    }
+
+    .faq-item:first-child {
+      border-top: 1px solid var(--color-border);
+    }
+
+    .faq-question {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--color-ink);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+      padding: 0;
+      line-height: 1.4;
+    }
+
+    .faq-question::after {
+      content: '+';
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--color-muted);
+      flex-shrink: 0;
+      transition: transform 0.2s;
+    }
+
+    .faq-item.open .faq-question::after {
+      content: '\2212';
+    }
+
+    .faq-answer {
+      display: none;
+      padding-top: 1rem;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--color-body);
+    }
+
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+
+    /* CTA */
+    .cta {
+      padding: 5rem 2rem;
+      background: var(--color-ink);
+      text-align: center;
+    }
+
+    .cta-inner {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .cta h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.6rem, 3vw, 2rem);
+      font-weight: 600;
+      color: var(--color-white);
+      margin-bottom: 1rem;
+    }
+
+    .cta p {
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.65);
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+
+    .cta-email {
+      display: inline-block;
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--color-white);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 0.9rem 2.2rem;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: all 0.2s;
+      letter-spacing: 0.02em;
+    }
+
+    .cta-email:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* Footer */
+    .footer {
+      padding: 2.5rem 2rem;
+      background: var(--color-ink);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      text-align: center;
+    }
+
+    .footer p {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.35);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: var(--color-bg);
+        border-bottom: 1px solid var(--color-border);
+        flex-direction: column;
+        padding: 1.5rem 2rem;
+        gap: 1.2rem;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-toggle {
+        display: block;
+      }
+
+      .hero {
+        padding: 4rem 1.5rem 3.5rem;
+      }
+
+      .hero-details {
+        gap: 1.5rem;
+      }
+
+      .section {
+        padding: 3.5rem 1.5rem;
+      }
+
+      .two-col {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+      }
+
+      .location-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .fee-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .organizer-box {
+        grid-template-columns: 1fr;
+        text-align: center;
+        justify-items: center;
+      }
+
+      .organizer-list {
+        gap: 1rem;
+      }
+
+      .process-steps {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .cta {
+        padding: 3.5rem 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .process-steps {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">Hiraizumi Learning Program</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#structure">Structure</a></li>
+        <li><a href="#location">Location</a></li>
+        <li><a href="#fee">Fee</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-inner">
+      <span class="hero-label">Now Accepting Applications</span>
+      <h1>3-Month Learning-Based Stay&nbsp;Program in&nbsp;Japan</h1>
+      <p class="hero-subtitle">
+        A selective, small-scale immersive program in Hiraizumi &mdash; a UNESCO World Heritage town in northern Japan. Learn through real DX projects that solve challenges faced by local businesses and government, while living in a community that few international students ever experience.
+      </p>
+      <div class="hero-details">
+        <div class="hero-detail">
+          <span class="hero-detail-label">Duration</span>
+          <span class="hero-detail-value">3 Months</span>
+        </div>
+        <div class="hero-detail">
+          <span class="hero-detail-label">Location</span>
+          <span class="hero-detail-value">Hiraizumi, Iwate</span>
+        </div>
+        <div class="hero-detail">
+          <span class="hero-detail-label">Format</span>
+          <span class="hero-detail-value">In-Person, Residential</span>
+        </div>
+        <div class="hero-detail">
+          <span class="hero-detail-label">Group Size</span>
+          <span class="hero-detail-value">Small Cohort</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Program Overview -->
+  <section class="section" id="overview">
+    <div class="section-inner">
+      <p class="section-label">Program Overview</p>
+      <h2 class="section-title">Learn Through Real DX Projects in Rural Japan</h2>
+      <p class="section-text">
+        This is a 3-month learning-based stay program designed for international participants who want to gain real experience in Japan. The core of the program is project-based learning: you will work on DX (Digital Transformation) projects that address real challenges faced by local businesses and municipal government in Hiraizumi.
+      </p>
+      <p class="section-text">
+        Rather than studying in a major city like Tokyo, participants live and learn in Hiraizumi &mdash; a quiet, historic town in northern Japan. This setting allows for deeper learning, sustained focus, and genuine cultural immersion. The program is selective and small-scale, prioritizing learning quality and personal support.
+      </p>
+
+      <div class="two-col">
+        <div class="col-card">
+          <h3>This Program Is For</h3>
+          <ul>
+            <li>Students studying IT, computer science, or software engineering</li>
+            <li>Students studying tourism management or hospitality</li>
+            <li>Those who want to learn AI and apply it to real-world problems</li>
+            <li>Those interested in working in Japan in the future</li>
+            <li>Those who want to study Japanese through daily life, not only textbooks</li>
+            <li>Those comfortable living in a local Japanese community</li>
+          </ul>
+        </div>
+        <div class="col-card">
+          <h3>What You Will Gain</h3>
+          <ul>
+            <li>Hands-on experience solving real business and government challenges with technology</li>
+            <li>Practical skills in DX, AI tools, and digital problem-solving</li>
+            <li>Practical Japanese communication skills</li>
+            <li>Understanding of how local industries and tourism operate in Japan</li>
+            <li>Collaborative experience in an international project team</li>
+            <li>A portfolio of real project work for job interviews and applications</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Program Structure -->
+  <section class="section section--alt" id="structure">
+    <div class="section-inner">
+      <p class="section-label">Program Structure</p>
+      <h2 class="section-title">Three Phases of Learning</h2>
+      <p class="section-text">
+        The program is structured in three phases, each building on the last. The exact content may be adapted based on each participant's background, interests, and goals.
+      </p>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-phase">
+            <span>Month 1</span>
+            Foundation
+          </div>
+          <div class="timeline-content">
+            <h3>Orientation &amp; Foundation</h3>
+            <p>Settle into daily life in Hiraizumi. Begin practical Japanese language study, learn local customs, and build relationships with community members. Get introduced to the local businesses and government organizations you will work with, and start understanding the challenges they face.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-phase">
+            <span>Month 2</span>
+            Immersion
+          </div>
+          <div class="timeline-content">
+            <h3>DX Projects &amp; Active Learning</h3>
+            <p>Work on DX projects addressing real challenges of local businesses and municipal government. Apply technology &mdash; including AI tools &mdash; to practical problems such as tourism promotion, operational efficiency, and digital communication. Deepen your Japanese through daily project collaboration and community interaction.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-phase">
+            <span>Month 3</span>
+            Integration
+          </div>
+          <div class="timeline-content">
+            <h3>Presentation &amp; Reflection</h3>
+            <p>Finalize your DX project and present your outcomes to local stakeholders. Reflect on your growth, build a portfolio of real project work, and prepare for your next steps &mdash; whether that is further study, work in Japan, or returning home with new skills and perspective.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location -->
+  <section class="section" id="location">
+    <div class="section-inner">
+      <p class="section-label">Location</p>
+      <h2 class="section-title">Why Hiraizumi</h2>
+      <p class="section-text">
+        Hiraizumi is a UNESCO World Heritage town with a rich cultural history stretching back nearly a thousand years. Located in Iwate Prefecture in northern Japan, it offers an environment that is rare for international programs &mdash; one where learning happens naturally through daily life.
+      </p>
+
+      <div class="location-grid">
+        <div class="location-card">
+          <span class="location-card-icon" role="img" aria-label="Calm environment">&#9707;</span>
+          <h3>Calm Environment</h3>
+          <p>Fewer distractions and a slower pace create the ideal conditions for deep focus and genuine learning.</p>
+        </div>
+        <div class="location-card">
+          <span class="location-card-icon" role="img" aria-label="Local interaction">&#9734;</span>
+          <h3>Close Local Interaction</h3>
+          <p>In a small town, relationships form naturally. You will interact with local residents as part of daily life.</p>
+        </div>
+        <div class="location-card">
+          <span class="location-card-icon" role="img" aria-label="Authentic experience">&#9753;</span>
+          <h3>Authentic Daily Life</h3>
+          <p>Experience Japan as it is actually lived &mdash; not the curated version found in tourist areas or big cities.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fee -->
+  <section class="section section--alt" id="fee">
+    <div class="section-inner">
+      <p class="section-label">Program Fee</p>
+      <h2 class="section-title">Investment &amp; What Is Included</h2>
+
+      <div class="fee-box">
+        <div class="fee-amount">USD 3,500 &ndash; 5,000</div>
+        <p class="fee-note">Final pricing depends on the program track and accommodation type.</p>
+
+        <div class="fee-grid">
+          <div class="fee-col">
+            <h4>Included</h4>
+            <ul class="fee-included">
+              <li>Japanese language classes</li>
+              <li>Learning activities and projects</li>
+              <li>Accommodation for 3 months</li>
+              <li>Program coordination and support</li>
+            </ul>
+          </div>
+          <div class="fee-col">
+            <h4>Not Included</h4>
+            <ul class="fee-notincluded">
+              <li>International flights</li>
+              <li>Daily meals</li>
+              <li>Personal expenses</li>
+              <li>Travel insurance</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Organizer -->
+  <section class="section" id="organizer">
+    <div class="section-inner">
+      <p class="section-label">Our Team</p>
+      <h2 class="section-title">Who Runs This Program</h2>
+
+      <div class="organizer-list">
+        <div class="organizer-box">
+          <div class="organizer-avatar">CK</div>
+          <div class="organizer-info">
+            <h3>Chihiro Kurose</h3>
+            <p class="role">Program Director &amp; Organizer &middot; CEO, Herofund Inc. &middot; Board Member, Asia Institute of Innovation</p>
+            <p>
+              I have experience in international education and cross-border educational programs between Japan and Asia. I have worked on initiatives supporting international students and designing learning-based programs in Japan. I design and manage this program on a small scale to ensure quality, responsibility, and personal attention to each participant.
+            </p>
+          </div>
+        </div>
+
+        <div class="organizer-box">
+          <div class="organizer-avatar">HM</div>
+          <div class="organizer-info">
+            <h3>Hirofumi Mori</h3>
+            <p class="role">CEO, Wald Inc. &middot; Visiting Professor, Asia Institute of Innovation</p>
+            <p>
+              After completing his graduate studies at the University of Tokyo, Hirofumi worked at Hitachi Group for over a decade, including an assignment in Silicon Valley, California. He has extensive experience working with highly skilled international talent across the globe. He currently leads Wald Inc., providing DX solutions with Southeast Asian professionals, and serves as Vice Director of the Hiraizumi Economic Revitalization Institute. He also lectures at multiple universities on topics including global talent, business strategy, and regional development.
+            </p>
+          </div>
+        </div>
+
+        <div class="organizer-box">
+          <div class="organizer-avatar">SC</div>
+          <div class="organizer-info">
+            <h3>Srey Chanreaksmey</h3>
+            <p class="role">Program Advisor &middot; Asia Institute of Innovation Graduate</p>
+            <p>
+              Chanreaksmey graduated from Asia Institute of Innovation with a degree in Tourism Management and currently works at a Japanese company. As a graduate who successfully transitioned into the Japanese workforce, she brings firsthand understanding of the challenges and opportunities that international participants face. Her experience bridges the gap between academic learning and professional life in Japan.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Application Process -->
+  <section class="section section--alt" id="apply">
+    <div class="section-inner">
+      <p class="section-label">How to Apply</p>
+      <h2 class="section-title">Application Process</h2>
+      <p class="section-text">
+        We keep the application process straightforward and personal. There is no complex online form &mdash; we start with a conversation.
+      </p>
+
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-number">1</div>
+          <h3>Inquiry</h3>
+          <p>Send us an email expressing your interest. Tell us briefly about yourself and why you are interested.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">2</div>
+          <h3>Conversation</h3>
+          <p>We will arrange an initial conversation to understand your background, goals, and expectations.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">3</div>
+          <h3>Application</h3>
+          <p>Complete a short application form. We review your fit for the program and the current cohort.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">4</div>
+          <h3>Enrollment</h3>
+          <p>If accepted, you will receive detailed guidance on next steps, visa, travel, and preparation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="section-inner">
+      <p class="section-label">FAQ</p>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">Do I need to speak Japanese before joining?</button>
+          <div class="faq-answer">No prior Japanese is required, although basic knowledge is helpful. The program includes practical Japanese study, and you will develop your skills through daily life and structured learning activities.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What type of visa do I need?</button>
+          <div class="faq-answer">Visa requirements depend on your nationality and circumstances. Once you are accepted, we will provide guidance on the appropriate visa type and application process for a 3-month stay in Japan.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Can I receive academic credit for this program?</button>
+          <div class="faq-answer">This program is not affiliated with a specific university, but we can provide documentation of your participation and learning outcomes. Many universities accept such documentation for credit transfer &mdash; please consult your academic advisor.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How large is each cohort?</button>
+          <div class="faq-answer">The program is intentionally small-scale. Exact cohort sizes may vary, but we keep groups small to ensure quality interaction, personal support, and meaningful community engagement.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What kind of accommodation is provided?</button>
+          <div class="faq-answer">Accommodation is arranged locally in Hiraizumi. The type may vary depending on availability and the program track, but all options are comfortable and suitable for a 3-month stay. Details will be shared upon acceptance.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Is this program suitable for graduate students or working professionals?</button>
+          <div class="faq-answer">Yes. The program is designed to accommodate participants with different backgrounds and levels of experience. The content can be adapted to suit individual learning goals, whether academic, professional, or personal.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What happens after the program?</button>
+          <div class="faq-answer">Participants leave with practical skills, cultural understanding, and documented experience that can support future career or academic plans in Japan. We also remain available for guidance and references as you take your next steps.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="contact">
+    <div class="cta-inner">
+      <h2>Interested in Joining?</h2>
+      <p>
+        If this program resonates with your goals, we would like to hear from you. Send us an email and we will guide you through the next steps.
+      </p>
+      <a href="mailto:chihikuro@gmail.com" class="cta-email">chihikuro@gmail.com</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 Hiraizumi Learning Program. All rights reserved.</p>
+
+  </footer>
+
+  <script>
+    // Navigation scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 10);
+    });
+
+    // Mobile menu toggle
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+
+    // Close mobile menu on link click
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+      });
+    });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.parentElement;
+        const isOpen = item.classList.contains('open');
+        // Close all
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        // Toggle current
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+  </script>
+
+</body>
+</html>
