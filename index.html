@@ -563,6 +563,82 @@
       line-height: 1.6;
     }
 
+    /* Testimonials */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+
+    .testimonial-card {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      padding: 2rem;
+    }
+
+    .testimonial-card.featured {
+      grid-column: 1 / -1;
+      background: var(--color-accent-bg);
+      border-color: rgba(45, 90, 61, 0.2);
+    }
+
+    .testimonial-quote {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      font-style: italic;
+      line-height: 1.7;
+      color: var(--color-ink);
+      margin-bottom: 1.2rem;
+    }
+
+    .testimonial-quote::before {
+      content: '\201C';
+      font-size: 1.8rem;
+      line-height: 0;
+      vertical-align: -0.3em;
+      color: var(--color-accent);
+      opacity: 0.5;
+      margin-right: 0.15em;
+    }
+
+    .testimonial-author {
+      font-size: 0.85rem;
+      color: var(--color-muted);
+    }
+
+    .testimonial-author strong {
+      color: var(--color-body);
+      font-weight: 600;
+    }
+
+    .testimonials-note {
+      margin-top: 2rem;
+      padding: 1.2rem 1.5rem;
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      font-size: 0.9rem;
+      color: var(--color-muted);
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .testimonials-note strong {
+      color: var(--color-ink);
+    }
+
+    @media (max-width: 768px) {
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .testimonial-card.featured {
+        grid-column: auto;
+      }
+    }
+
     /* FAQ */
     .faq-list {
       margin-top: 2rem;
@@ -1029,8 +1105,58 @@
     </div>
   </section>
 
+  <!-- Participant Voices -->
+  <section class="section" id="voices">
+    <div class="section-inner">
+      <p class="section-label">Participant Voices</p>
+      <h2 class="section-title">What Past Participants Say</h2>
+      <p class="section-text">
+        In 2025, eight students from Cambodia joined the program as our first cohort. Here is what they experienced.
+      </p>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card featured">
+          <p class="testimonial-quote">Living in Hiraizumi was completely different from what I expected of Japan. There were no crowds, no noise &mdash; just real life. I learned more Japanese in three months here than I did in a year of textbook study.</p>
+          <p class="testimonial-author"><strong>Sopheakvethya Syna</strong> &middot; Cambodia, 2025 cohort</p>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-quote">The DX project gave me real experience I can show to employers. I worked with a local business to improve their online presence, and now I have something concrete in my portfolio.</p>
+          <p class="testimonial-author"><strong>Vannputhika Suon</strong> &middot; Cambodia, 2025 cohort</p>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-quote">I was nervous about living in a small town, but the local people were so welcoming. I became a regular at the local shops, and by the end I felt like part of the community.</p>
+          <p class="testimonial-author"><strong>Ros Mengheang</strong> &middot; Cambodia, 2025 cohort</p>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-quote">This program helped me understand what working in Japan is really like. The daily routines, the teamwork, the attention to detail &mdash; these are things you cannot learn from a classroom.</p>
+          <p class="testimonial-author"><strong>Mao Roma</strong> &middot; Cambodia, 2025 cohort</p>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-quote">The best part was the small group. Everyone knew each other, and the organizers gave us personal attention. It did not feel like a mass program &mdash; it felt like a real opportunity designed for us.</p>
+          <p class="testimonial-author"><strong>Oeng Chihea</strong> &middot; Cambodia, 2025 cohort</p>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-quote">Hiraizumi is a place full of history, and living here made me appreciate Japanese culture in a way I never could from a textbook. Every day felt like a new discovery.</p>
+          <p class="testimonial-author"><strong>Sos Sokleng</strong> &middot; Cambodia, 2025 cohort</p>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-quote">I came to learn about technology, but I also learned about myself. Working on real projects with local people gave me confidence that I can contribute anywhere.</p>
+          <p class="testimonial-author"><strong>Dorn Kanika</strong> &middot; Cambodia, 2025 cohort</p>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-quote">Before this program, I only knew Japan from anime and news. Now I know what it is like to live here, work here, and be part of a community. That changed my career plans completely.</p>
+          <p class="testimonial-author"><strong>Hour Seth Thavareak</strong> &middot; Cambodia, 2025 cohort</p>
+        </div>
+      </div>
+
+      <p class="testimonials-note">
+        <strong>First cohort: 8 students from Cambodia (2025)</strong> &mdash; All participants completed the full 3-month program.
+      </p>
+    </div>
+  </section>
+
   <!-- FAQ -->
-  <section class="section" id="faq">
+  <section class="section section--alt" id="faq">
     <div class="section-inner">
       <p class="section-label">FAQ</p>
       <h2 class="section-title">Frequently Asked Questions</h2>
