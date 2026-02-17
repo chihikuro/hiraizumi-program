@@ -361,7 +361,33 @@
       color: var(--color-body);
     }
 
+    .timeline-photo {
+      width: 100%;
+      margin-top: 1rem;
+      border-radius: 4px;
+      max-height: 280px;
+      object-fit: cover;
+    }
+
     /* Location section */
+    .location-photos {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0.8rem;
+      margin-top: 2rem;
+      margin-bottom: 2.5rem;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .location-photo {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+      border-radius: 4px;
+    }
+
     .location-grid {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
@@ -629,6 +655,29 @@
       color: var(--color-ink);
     }
 
+    .voices-photo-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.8rem;
+      margin-top: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .voices-photo-gallery img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .voices-photo-caption {
+      font-size: 0.82rem;
+      color: var(--color-muted);
+      text-align: center;
+      margin-top: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
     @media (max-width: 768px) {
       .testimonials-grid {
         grid-template-columns: 1fr;
@@ -636,6 +685,22 @@
 
       .testimonial-card.featured {
         grid-column: auto;
+      }
+
+      .voices-photo-gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .voices-photo-gallery img {
+        height: 240px;
+      }
+
+      .location-photos {
+        grid-template-columns: 1fr;
+      }
+
+      .location-photo {
+        height: 220px;
       }
     }
 
@@ -949,6 +1014,7 @@
           <div class="timeline-content">
             <h3>DX Projects &amp; Active Learning</h3>
             <p>Work on DX projects addressing real challenges of local businesses and municipal government. Apply technology &mdash; including AI tools &mdash; to practical problems such as tourism promotion, operational efficiency, and digital communication. Deepen your Japanese through daily project collaboration and community interaction.</p>
+            <img src="images/activity-1.jpg" alt="Participants in a DX project workshop and presentation" class="timeline-photo">
           </div>
         </div>
         <div class="timeline-item">
@@ -973,6 +1039,12 @@
       <p class="section-text">
         Hiraizumi is a UNESCO World Heritage town with a rich cultural history stretching back nearly a thousand years. Located in Iwate Prefecture in northern Japan, it offers an environment that is rare for international programs &mdash; one where learning happens naturally through daily life.
       </p>
+
+      <div class="location-photos">
+        <img src="images/hiraizumi-1.jpg" alt="Chusonji Temple, a UNESCO World Heritage site in Hiraizumi" class="location-photo">
+        <img src="images/hiraizumi-2.jpg" alt="Hiraizumi Station" class="location-photo">
+        <img src="images/activity-3.jpg" alt="Program participants joining a traditional local festival" class="location-photo">
+      </div>
 
       <div class="location-grid">
         <div class="location-card">
@@ -1113,6 +1185,13 @@
       <p class="section-text">
         In 2025, eight students from Cambodia joined the program as our first cohort. Here is what they experienced.
       </p>
+
+      <div class="voices-photo-gallery">
+        <img src="images/participant-vannputhika.jpg" alt="Participants enjoying cherry blossoms in Hiraizumi">
+        <img src="images/participant-thavareak.jpg" alt="Participants visiting Chusonji Temple">
+        <img src="images/participant-kanika.jpg" alt="Participants experiencing local cuisine">
+      </div>
+      <p class="voices-photo-caption">Daily life and cultural experiences during the 2025 program</p>
 
       <div class="testimonials-grid">
         <div class="testimonial-card featured">
