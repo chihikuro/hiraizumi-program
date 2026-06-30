@@ -174,7 +174,43 @@
         .phase h3 {
             margin-top: 0;
         }
+        .team-member-card {
+            display: flex;
+            gap: 2rem;
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: #f5f5f5;
+            border-radius: 8px;
+            align-items: flex-start;
+        }
+        .team-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 8px;
+            object-fit: cover;
+            flex-shrink: 0;
+            margin: 0;
+        }
+        .team-content {
+            flex: 1;
+        }
+        .team-content strong {
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: #1B3A6E;
+        }
+        .team-content .title {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        .team-content p {
+            margin: 0;
+        }
+        
         .team-member {
+
             margin: 2rem 0;
             padding: 1.5rem;
             background: #f5f5f5;
@@ -401,22 +437,31 @@
             <h2>Our Team</h2>
             <h3>Who Runs This Program</h3>
 
-            <div class="team-member">
-                <strong>Chihiro Kurose</strong>
-                <div class="title">Program Director & Organizer · CEO, Herofund Inc. · Board Member, Asia Institute of Innovation</div>
-                <p>I have experience in international education and cross-border educational programs between Japan and Asia. I have worked on initiatives supporting international students and designing learning-based programs in Japan. I design and manage this program on a small scale to ensure quality, responsibility, and personal attention to each participant.</p>
+            <div class="team-member-card">
+                <img src="profiles/chihiro-kurose.jpg" alt="Chihiro Kurose" class="team-photo">
+                <div class="team-content">
+                    <strong>Chihiro Kurose</strong>
+                    <div class="title">Program Director & Organizer · CEO, Herofund Inc. · Board Member, Asia Institute of Innovation</div>
+                    <p>I have experience in international education and cross-border educational programs between Japan and Asia. I have worked on initiatives supporting international students and designing learning-based programs in Japan. I design and manage this program on a small scale to ensure quality, responsibility, and personal attention to each participant.</p>
+                </div>
             </div>
 
-            <div class="team-member">
-                <strong>Hirofumi Mori</strong>
-                <div class="title">CEO, Wald Inc. · Visiting Professor, Asia Institute of Innovation</div>
-                <p>After completing his graduate studies at the University of Tokyo, Hirofumi worked at Hitachi Group for over a decade, including an assignment in Silicon Valley, California. He has extensive experience working with highly skilled international talent across the globe. He currently leads Wald Inc., providing DX solutions with Southeast Asian professionals, and serves as Vice Director of the Hiraizumi Economic Revitalization Institute. He also lectures at multiple universities on topics including global talent, business strategy, and regional development.</p>
+            <div class="team-member-card">
+                <img src="profiles/mori-hirofumi.jpg" alt="Hirofumi Mori" class="team-photo">
+                <div class="team-content">
+                    <strong>Hirofumi Mori</strong>
+                    <div class="title">CEO, Wald Inc. · Visiting Professor, Asia Institute of Innovation</div>
+                    <p>After completing his graduate studies at the University of Tokyo, Hirofumi worked at Hitachi Group for over a decade, including an assignment in Silicon Valley, California. He has extensive experience working with highly skilled international talent across the globe. He currently leads Wald Inc., providing DX solutions with Southeast Asian professionals, and serves as Vice Director of the Hiraizumi Economic Revitalization Institute. He also lectures at multiple universities on topics including global talent, business strategy, and regional development.</p>
+                </div>
             </div>
 
-            <div class="team-member">
-                <strong>Srey Chanreaksmey</strong>
-                <div class="title">Program Advisor · Asia Institute of Innovation Graduate</div>
-                <p>Chanreaksmey graduated from Asia Institute of Innovation with a degree in Tourism Management and currently works at a Japanese company. As a graduate who successfully transitioned into the Japanese workforce, she brings firsthand understanding of the challenges and opportunities that international participants face. Her experience bridges the gap between academic learning and professional life in Japan.</p>
+            <div class="team-member-card">
+                <img src="profiles/srey-chanreaksmey.jpg" alt="Srey Chanreaksmey" class="team-photo">
+                <div class="team-content">
+                    <strong>Srey Chanreaksmey</strong>
+                    <div class="title">Program Advisor · Asia Institute of Innovation Graduate</div>
+                    <p>Chanreaksmey graduated from Asia Institute of Innovation with a degree in Tourism Management and currently works at a Japanese company. As a graduate who successfully transitioned into the Japanese workforce, she brings firsthand understanding of the challenges and opportunities that international participants face. Her experience bridges the gap between academic learning and professional life in Japan.</p>
+                </div>
             </div>
         </section>
 
