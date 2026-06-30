@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A selective 1-month learning-based stay program in Hiraizumi, Japan. Learn through real DX projects while living in a UNESCO World Heritage town.">
-    <title>Hiraizumi DX Learning Program | HeroFund Inc.</title>
+    <title>Hiraizumi Learning Program | HeroFund Inc.</title>
     <style>
         * {
             margin: 0;
@@ -27,7 +27,8 @@
         nav a {
             margin-right: 2rem;
             text-decoration: none;
-            color: #0066cc;
+            color: #1B3A6E;
+            font-weight: 500;
         }
         nav a:hover {
             text-decoration: underline;
@@ -44,7 +45,7 @@
         h2 {
             font-size: 1.8rem;
             margin: 2rem 0 1rem;
-            border-bottom: 2px solid #0066cc;
+            border-bottom: 2px solid #1B3A6E;
             padding-bottom: 0.5rem;
         }
         h3 {
@@ -57,17 +58,69 @@
             margin: 1.5rem 0;
             border-radius: 8px;
         }
-        .hero-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        
+        /* 新しいバナースタイル */
+        .hero-banner {
+            background: linear-gradient(135deg, #1B3A6E 0%, #2E5090 50%, #4A90E2 100%);
             color: white;
-            padding: 3rem 2rem;
+            padding: 4rem 2rem;
             text-align: center;
-            margin: -2rem -2rem 2rem -2rem;
+            margin: -2rem -2rem 3rem -2rem;
+            position: relative;
+            overflow: hidden;
         }
-        .hero-section h1 {
+        
+        .hero-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #FFD700 0%, #FFA500 50%, #FFD700 100%);
+        }
+        
+        .hero-banner::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 40px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 60'%3E%3Cpath d='M0,30 Q100,10 200,30 T400,30 T600,30 T800,30 T1000,30 T1200,30 L1200,60 L0,60 Z' fill='%23ffffff' opacity='0.1'/%3E%3C/svg%3E") repeat-x;
+            background-size: 200px 40px;
+        }
+        
+        .hero-banner-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-banner h1 {
             color: white;
-            margin-top: 0;
+            margin: 0 0 0.5rem 0;
+            font-size: 2.8rem;
+            letter-spacing: 0.5px;
+            font-weight: 700;
         }
+        
+        .hero-banner .subtitle {
+            font-size: 1.3rem;
+            color: #FFD700;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-top: 1rem;
+        }
+        
+        .hero-banner .accent {
+            font-size: 1rem;
+            color: #ffffff;
+            margin-top: 1.5rem;
+            opacity: 0.95;
+            font-weight: 300;
+            letter-spacing: 1.5px;
+        }
+        
         .info-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -90,11 +143,11 @@
             display: block;
             font-size: 1.5rem;
             font-weight: bold;
-            color: #333;
+            color: #1B3A6E;
         }
         .cta-button {
             display: inline-block;
-            background: #0066cc;
+            background: #1B3A6E;
             color: white;
             padding: 1rem 2rem;
             border-radius: 8px;
@@ -104,15 +157,18 @@
             cursor: pointer;
             border: none;
             font-size: 1rem;
+            transition: all 0.3s ease;
         }
         .cta-button:hover {
-            background: #0052a3;
+            background: #4A90E2;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(26, 58, 110, 0.3);
         }
         .phase {
             background: #f9f9f9;
             padding: 1.5rem;
             margin: 1.5rem 0;
-            border-left: 4px solid #0066cc;
+            border-left: 4px solid #4A90E2;
             border-radius: 4px;
         }
         .phase h3 {
@@ -128,6 +184,7 @@
             display: block;
             font-size: 1.1rem;
             margin-bottom: 0.5rem;
+            color: #1B3A6E;
         }
         .team-member .title {
             font-size: 0.9rem;
@@ -145,17 +202,17 @@
         .faq-item strong {
             display: block;
             margin-bottom: 0.5rem;
-            color: #0066cc;
+            color: #1B3A6E;
         }
         footer {
-            background: #333;
+            background: #1B3A6E;
             color: white;
             padding: 2rem;
             margin-top: 3rem;
             text-align: center;
         }
         footer a {
-            color: #0066cc;
+            color: #FFD700;
         }
         @media (max-width: 768px) {
             .info-grid {
@@ -166,6 +223,12 @@
             }
             h2 {
                 font-size: 1.3rem;
+            }
+            .hero-banner h1 {
+                font-size: 1.8rem;
+            }
+            .hero-banner .subtitle {
+                font-size: 1rem;
             }
         }
     </style>
@@ -180,16 +243,19 @@
         <a href="#contact">Contact</a>
     </nav>
 
-    <div class="container">
-        <div class="hero-section">
-            <h1>Japanese culture exchange & DX Learning Program</h1>
-            <p style="font-size: 1.1rem; margin-top: 1rem;">Now Accepting Applications</p>
+    <div class="hero-banner">
+        <div class="hero-banner-content">
+            <h1>Japan Exchange & DX Learning Program</h1>
+            <div class="subtitle">Now Accepting Applications</div>
+            <div class="accent">一ヶ月の集中型プログラム</div>
         </div>
+    </div>
 
+    <div class="container">
         <h1>1-Month Learning-Based Stay Program in Japan</h1>
         <p>A selective, small-scale immersive program in Hiraizumi — a UNESCO World Heritage town in northern Japan. Learn through real DX projects that solve challenges faced by local businesses and government, while living in a community that few international students ever experience.</p>
 
-        <img src="images/hero-hiraizumi.jpg" alt="Sunset over Muryokoin Hiraizumi with calm fields and traditional homes">
+        <img src="images/hero-hiraizumi.jpg" alt="Sunrise over Hiraizumi valley with rice fields and traditional homes">
 
         <div class="info-grid">
             <div>
@@ -206,7 +272,7 @@
             </div>
             <div>
                 <strong>Group Size</strong>
-                <span>10 participants per batch</span>
+                <span>Small Cohort</span>
             </div>
         </div>
 
@@ -244,13 +310,13 @@
             <div class="phase">
                 <h3>Week 1 — Orientation & Foundation</h3>
                 <p><strong>Settle In, Learn Local Context</strong></p>
-                <p>Arrive in Hiraizumi and begin settling into daily life. Start practical Japanese language study, learn local customs, and build relationships with community members through volunteer. Get introduced to the local businesses and government organizations you will work with during your stay.</p>
+                <p>Arrive in Hiraizumi and begin settling into daily life. Start practical Japanese language study, learn local customs, and build relationships with community members. Get introduced to the local businesses and government organizations you will work with during your stay.</p>
                 <img src="images/week1-community.jpg" alt="International students and local residents at a community culture exchange event">
             </div>
 
             <div class="phase">
                 <h3>Week 2 — Project Immersion</h3>
-                <p><strong>Begin Real DX Project</strong></p>
+                <p><strong>Begin Real DX Work</strong></p>
                 <p>Start working on DX projects addressing real challenges of local businesses and municipal government. Apply technology — including AI tools — to practical problems. Collaborate with team members and local stakeholders on the ground.</p>
                 <img src="images/week2-discussion.jpg" alt="Group discussion and project planning session with participants">
             </div>
@@ -301,13 +367,13 @@
         <section id="fee">
             <h2>Program Fee</h2>
             <h3>Investment & What Is Included</h3>
-            <div style="background: #f0f0f0; padding: 2rem; border-radius: 8px; margin: 1.5rem 0; text-align: center;">
-                <div style="font-size: 2rem; font-weight: bold; color: #0066cc;">USD 2,500</div>
+            <div style="background: linear-gradient(135deg, #1B3A6E 0%, #4A90E2 100%); color: white; padding: 2rem; border-radius: 8px; margin: 1.5rem 0; text-align: center;">
+                <div style="font-size: 2rem; font-weight: bold;">USD 2,500</div>
             </div>
 
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
                 <div>
-                    <h4 style="color: #0066cc; margin-bottom: 1rem;">Included</h4>
+                    <h4 style="color: #1B3A6E; margin-bottom: 1rem;">Included</h4>
                     <ul style="margin-left: 1.5rem;">
                         <li>Japanese language classes</li>
                         <li>Learning activities and projects</li>
@@ -363,22 +429,22 @@
 
             <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin: 2rem 0;">
                 <div style="background: #f5f5f5; padding: 1.5rem; border-radius: 8px; text-align: center;">
-                    <div style="font-size: 1.8rem; font-weight: bold; color: #0066cc; margin-bottom: 0.5rem;">1</div>
+                    <div style="font-size: 1.8rem; font-weight: bold; color: #1B3A6E; margin-bottom: 0.5rem;">1</div>
                     <strong>Inquiry</strong>
                     <p style="font-size: 0.9rem; margin-top: 0.5rem;">Send us an email expressing your interest.</p>
                 </div>
                 <div style="background: #f5f5f5; padding: 1.5rem; border-radius: 8px; text-align: center;">
-                    <div style="font-size: 1.8rem; font-weight: bold; color: #0066cc; margin-bottom: 0.5rem;">2</div>
+                    <div style="font-size: 1.8rem; font-weight: bold; color: #1B3A6E; margin-bottom: 0.5rem;">2</div>
                     <strong>Conversation</strong>
                     <p style="font-size: 0.9rem; margin-top: 0.5rem;">We will arrange an initial conversation.</p>
                 </div>
                 <div style="background: #f5f5f5; padding: 1.5rem; border-radius: 8px; text-align: center;">
-                    <div style="font-size: 1.8rem; font-weight: bold; color: #0066cc; margin-bottom: 0.5rem;">3</div>
+                    <div style="font-size: 1.8rem; font-weight: bold; color: #1B3A6E; margin-bottom: 0.5rem;">3</div>
                     <strong>Application</strong>
                     <p style="font-size: 0.9rem; margin-top: 0.5rem;">Complete a short application form.</p>
                 </div>
                 <div style="background: #f5f5f5; padding: 1.5rem; border-radius: 8px; text-align: center;">
-                    <div style="font-size: 1.8rem; font-weight: bold; color: #0066cc; margin-bottom: 0.5rem;">4</div>
+                    <div style="font-size: 1.8rem; font-weight: bold; color: #1B3A6E; margin-bottom: 0.5rem;">4</div>
                     <strong>Enrollment</strong>
                     <p style="font-size: 0.9rem; margin-top: 0.5rem;">Receive detailed guidance on next steps.</p>
                 </div>
@@ -483,9 +549,9 @@
     </div>
 
     <footer id="contact">
-        <p>© 2026 Hiraizumi Learning Program. All rights reserved.</p>
+        <p>© 2026 Japan Exchange & DX Learning Program. All rights reserved.</p>
         <p><strong>Operated by:</strong> HeroFund Inc. (HeroFund株式会社)</p>
-        <p>Contact: <a href="mailto:info@herofund.app">info@herofund.app</a></p>
+        <p>Contact: <a href="mailto:chihikuro@gmail.com">chihikuro@gmail.com</a></p>
         <p style="margin-top: 1rem; font-size: 0.9rem;">© 2026 HeroFund Inc. All rights reserved.</p>
     </footer>
 </body>
